@@ -9,3 +9,15 @@ Thumbs.db
 
 # Misc
 *.log
+
+# Data source files (Excel, DBF)
+*.xlsx
+*.xls
+*.dbf
+
+# Temp Python scripts
+parse_schools.py
+match_schools.py
+find_unmatched.py
+temp_find.py
+temp_add.py

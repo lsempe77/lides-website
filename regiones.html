@@ -12,6 +12,93 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/logo_edited.png" type="image/png">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      width: 100%;
+      height: 520px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      z-index: 1;
+    }
+    .map-legend {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+    .map-legend span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .map-legend .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid rgba(0,0,0,0.2);
+    }
+    .region-filter {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .region-filter button {
+      padding: 8px 18px;
+      border-radius: 24px;
+      border: 2px solid var(--primary);
+      background: white;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .region-filter button.active,
+    .region-filter button:hover {
+      background: var(--primary);
+      color: white;
+    }
+    .school-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      font-size: 0.9rem;
+    }
+    .school-table th {
+      background: var(--primary);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .school-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .school-table tr:hover td {
+      background: #f0f4f8;
+    }
+    .school-table th:first-child { border-radius: 8px 0 0 0; }
+    .school-table th:last-child { border-radius: 0 8px 0 0; }
+    .school-count {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    @media (max-width: 768px) {
+      #map { height: 380px; }
+      .school-table { font-size: 0.8rem; }
+      .school-table td, .school-table th { padding: 8px 10px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -57,170 +144,65 @@
     </div>
   </section>
 
-  <!-- ===== MAPA RESUMEN ===== -->
+  <!-- ===== MAPA INTERACTIVO ===== -->
   <section class="section">
     <div class="container">
-      <div class="regions-grid regions-grid--large fade-in">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Mapa interactivo</span>
+        <h2 class="section-header__title">Escuelas del Programa HANAQ</h2>
+        <p class="section-header__text">
+          Explora las 63 instituciones educativas participantes en cinco regiones del Perú.
+        </p>
+      </div>
 
-        <!-- PASCO -->
-        <div class="region-card region-card--expanded" id="pasco">
-          <div class="region-card__header">
-            <div class="region-card__icon"><i class="fas fa-mountain"></i></div>
-            <div>
-              <h3>Pasco</h3>
-              <span class="region-card__interventions">AMELIA · REPASO+</span>
-            </div>
-          </div>
-          <div class="region-card__body">
-            <h4>UGEL Daniel Alcides Carrión</h4>
-            <p>Escuelas de la intervención AMELIA y REPASO+ en la provincia de Daniel Alcides Carrión.</p>
-            <div class="school-list">
-              <h5>Escuelas AMELIA (5)</h5>
-              <ul>
-                <li>I.E. N° 34068 — Tusi</li>
-                <li>I.E. N° 34070 — Tusi</li>
-                <li>I.E. N° 34045 — Goyllarisquizga</li>
-                <li>I.E. N° 34082 — Yanahuanca</li>
-                <li>I.E. N° 34083 — Yanahuanca</li>
-              </ul>
-              <h5>Escuelas REPASO+ (varias)</h5>
-              <p class="school-list__note">Escuelas multigrado de primaria focalizadas por la UGEL DAC.</p>
-            </div>
-          </div>
+      <div class="fade-in">
+        <div id="map"></div>
+        <div class="map-legend">
+          <span><span class="dot" style="background: #1a5276;"></span> Pasco</span>
+          <span><span class="dot" style="background: #27ae60;"></span> Lima Provincias</span>
+          <span><span class="dot" style="background: #e74c3c;"></span> Arequipa</span>
+          <span><span class="dot" style="background: #8e44ad;"></span> Huancavelica</span>
+          <span><span class="dot" style="background: #f39c12;"></span> Cajamarca</span>
+          <span><span class="dot" style="background: #e67e22;"></span> Moquegua</span>
         </div>
-
-        <!-- LIMA PROVINCIAS -->
-        <div class="region-card region-card--expanded" id="lima">
-          <div class="region-card__header">
-            <div class="region-card__icon"><i class="fas fa-city"></i></div>
-            <div>
-              <h3>Lima Provincias</h3>
-              <span class="region-card__interventions">AMELIA · REPASO+</span>
-            </div>
-          </div>
-          <div class="region-card__body">
-            <h4>UGEL N° 14 Oyón</h4>
-            <p>Escuelas de la intervención AMELIA y REPASO+ en la provincia de Oyón, Lima.</p>
-            <div class="school-list">
-              <h5>Escuelas AMELIA (4)</h5>
-              <ul>
-                <li>I.E. N° 20066 — Oyón</li>
-                <li>I.E. N° 20068 — Oyón</li>
-                <li>I.E. N° 20071 — Oyón</li>
-                <li>I.E. N° 20085 — Oyón</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- AREQUIPA -->
-        <div class="region-card region-card--expanded" id="arequipa">
-          <div class="region-card__header">
-            <div class="region-card__icon"><i class="fas fa-volcano"></i></div>
-            <div>
-              <h3>Arequipa</h3>
-              <span class="region-card__interventions">REPASO+</span>
-            </div>
-          </div>
-          <div class="region-card__body">
-            <h4>UGEL Castilla</h4>
-            <p>Escuelas en la provincia de Castilla, Arequipa.</p>
-            <div class="school-list">
-              <h5>Escuelas focalizadas</h5>
-              <ul>
-                <li>I.E. N° 40230 — Castilla</li>
-                <li>I.E. N° 40244 — Castilla</li>
-                <li>I.E. N° 40253 — Castilla</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- HUANCAVELICA -->
-        <div class="region-card region-card--expanded" id="huancavelica">
-          <div class="region-card__header">
-            <div class="region-card__icon"><i class="fas fa-water"></i></div>
-            <div>
-              <h3>Huancavelica</h3>
-              <span class="region-card__interventions">REPASO+</span>
-            </div>
-          </div>
-          <div class="region-card__body">
-            <h4>UGEL Angaraes</h4>
-            <p>Escuelas multigrado de primaria en la provincia de Angaraes, Huancavelica.</p>
-            <div class="school-list">
-              <h5>Escuelas focalizadas</h5>
-              <ul>
-                <li>I.E. N° 36003 — Angaraes</li>
-                <li>I.E. N° 36114 — Angaraes</li>
-                <li>I.E. N° 36130 — Angaraes</li>
-                <li>I.E. N° 36229 — Angaraes</li>
-                <li>I.E. N° 36284 — Angaraes</li>
-                <li>I.E. N° 36359 — Angaraes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- CAJAMARCA -->
-        <div class="region-card region-card--expanded" id="cajamarca">
-          <div class="region-card__header">
-            <div class="region-card__icon"><i class="fas fa-tree"></i></div>
-            <div>
-              <h3>Cajamarca</h3>
-              <span class="region-card__interventions">CREER</span>
-            </div>
-          </div>
-          <div class="region-card__body">
-            <h4>UGEL Hualgayoc</h4>
-            <p>6 escuelas de la intervención CREER en la provincia de Hualgayoc.</p>
-            <div class="school-list">
-              <h5>Escuelas CREER (6)</h5>
-              <ul>
-                <li>I.E. N° 82673 — Hualgayoc</li>
-                <li>I.E. N° 82674 — Hualgayoc</li>
-                <li>I.E. N° 82676 — Hualgayoc</li>
-                <li>I.E. N° 82683 — Hualgayoc</li>
-                <li>I.E. N° 82690 — Hualgayoc</li>
-                <li>I.E. N° 82696 — Hualgayoc</li>
-              </ul>
-            </div>
-
-            <h4 style="margin-top: 24px;">UGEL San Miguel</h4>
-            <div class="school-list">
-              <h5>Escuelas CREER (3)</h5>
-              <ul>
-                <li>I.E. N° 82445 — San Miguel</li>
-                <li>I.E. N° 82452 — San Miguel</li>
-                <li>I.E. N° 82460 — San Miguel</li>
-              </ul>
-            </div>
-
-            <h4 style="margin-top: 24px;">UGEL Santa Cruz</h4>
-            <div class="school-list">
-              <h5>Escuelas CREER (1)</h5>
-              <ul>
-                <li>I.E. N° 82510 — Santa Cruz</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== MOQUEGUA (WAWAKUNAPAC) ===== -->
+  <!-- ===== LISTADO DE ESCUELAS ===== -->
   <section class="section section--alt">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-header__label">Programa WAWAKUNAPAC</span>
-        <h2 class="section-header__title">Moquegua — Distrito de Ichuña</h2>
-        <p class="section-header__text">
-          La intervención WAWAKUNAPAC opera en el distrito de Ichuña, provincia General Sánchez Cerro, 
-          región Moquegua. Se trabaja con instituciones de educación inicial del área rural, 
-          acompañando a docentes y familias en el desarrollo de los niños.
-        </p>
+        <span class="section-header__label">Listado completo</span>
+        <h2 class="section-header__title">Instituciones educativas participantes</h2>
+      </div>
+
+      <div class="fade-in">
+        <div class="region-filter" id="regionFilter">
+          <button class="active" data-region="all">Todas</button>
+          <button data-region="Pasco">Pasco</button>
+          <button data-region="Lima provincias">Lima Provincias</button>
+          <button data-region="Arequipa">Arequipa</button>
+          <button data-region="Huancavelica">Huancavelica</button>
+          <button data-region="Cajamarca">Cajamarca</button>
+          <button data-region="Moquegua">Moquegua</button>
+        </div>
+        <p class="school-count" id="schoolCount"></p>
+        <div style="overflow-x: auto;">
+          <table class="school-table">
+            <thead>
+              <tr>
+                <th>Institución Educativa</th>
+                <th>Región</th>
+                <th>Provincia</th>
+                <th>Distrito</th>
+                <th>Tipo</th>
+              </tr>
+            </thead>
+            <tbody id="schoolTableBody">
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -312,5 +294,111 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Region colors
+    const regionColors = {
+      'Pasco': '#1a5276',
+      'Lima provincias': '#27ae60',
+      'Arequipa': '#e74c3c',
+      'Huancavelica': '#8e44ad',
+      'Cajamarca': '#f39c12',
+      'Moquegua': '#e67e22'
+    };
+
+    let allSchools = [];
+    let markers = [];
+    let map;
+
+    // Initialize map
+    map = L.map('map', { scrollWheelZoom: false }).setView([-11.5, -75.5], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Load school data
+    fetch('data/schools.json')
+      .then(r => r.json())
+      .then(schools => {
+        allSchools = schools;
+        addMarkers(schools);
+        populateTable(schools);
+        document.getElementById('schoolCount').textContent = 
+          schools.length + ' instituciones educativas';
+      });
+
+    function addMarkers(schools) {
+      // Clear existing
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+
+      const group = [];
+      schools.forEach(s => {
+        if (!s.lat || !s.lon) return;
+        const color = regionColors[s.region] || '#333';
+        const marker = L.circleMarker([s.lat, s.lon], {
+          radius: 7,
+          fillColor: color,
+          color: '#fff',
+          weight: 2,
+          fillOpacity: 0.9
+        }).addTo(map);
+
+        marker.bindPopup(
+          '<div style="font-family: Inter, sans-serif; min-width: 180px;">' +
+          '<strong style="font-size: 1rem;">' + s.name + '</strong><br>' +
+          '<span style="color: ' + color + '; font-weight: 600;">' + s.region + '</span><br>' +
+          '<small>' + (s.distrito || '') + ', ' + s.provincia + '</small><br>' +
+          '<small>Tipo: ' + (s.tipo || '—') + '</small>' +
+          (s.alumnos ? '<br><small>Alumnos: ' + s.alumnos + ' · Docentes: ' + (s.docentes || '—') + '</small>' : '') +
+          '</div>'
+        );
+
+        markers.push(marker);
+        group.push([s.lat, s.lon]);
+      });
+
+      if (group.length > 0) {
+        map.fitBounds(group, { padding: [30, 30] });
+      }
+    }
+
+    function populateTable(schools) {
+      const tbody = document.getElementById('schoolTableBody');
+      tbody.innerHTML = '';
+      schools.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = 
+          '<td><strong>' + s.name + '</strong></td>' +
+          '<td>' + s.region + '</td>' +
+          '<td>' + s.provincia + '</td>' +
+          '<td>' + (s.distrito || '—') + '</td>' +
+          '<td>' + (s.tipo || '—') + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Region filter buttons
+    document.getElementById('regionFilter').addEventListener('click', function(e) {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      
+      // Update active state
+      this.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const region = btn.dataset.region;
+      const filtered = region === 'all' 
+        ? allSchools 
+        : allSchools.filter(s => s.region === region);
+      
+      addMarkers(filtered);
+      populateTable(filtered);
+      document.getElementById('schoolCount').textContent = 
+        filtered.length + ' instituciones educativas';
+    });
+  </script>
 </body>
 </html>
