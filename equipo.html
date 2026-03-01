@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo - Programa HANAQ - LIDES</title>
+  <meta name="description" content="Conoce al equipo del Programa HANAQ: coordinadores, tutores, acompañantes pedagógicas y especialistas que trabajan en 5 regiones del Perú.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo_edited.png" type="image/png">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <img src="img/logo_edited.png" alt="LIDES Logo">
+        <span>LIDES</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre.html">Nosotros</a></li>
+        <li class="nav__dropdown">
+          <a href="programa.html">Programa HANAQ <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
+        </li>
+        <li><a href="regiones.html">Regiones</a></li>
+        <li><a href="evaluacion.html">Evaluación</a></li>
+        <li><a href="equipo.html" class="active">Equipo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">Nuestro equipo</p>
+      <h1>Las personas detrás del Programa HANAQ</h1>
+      <p class="page-header__description">
+        Un equipo multidisciplinario de educadores, investigadores y especialistas comprometidos 
+        con la innovación educativa en las comunidades rurales del Perú.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ESTRUCTURA ORGANIZACIONAL ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Estructura</span>
+        <h2 class="section-header__title">Organización del programa</h2>
+        <p class="section-header__text">
+          El Programa HANAQ opera con una estructura multinivel que articula la dirección estratégica 
+          desde Lima con equipos de campo en cada región, asegurando una implementación de calidad 
+          y cercana a las comunidades.
+        </p>
+      </div>
+
+      <div class="org-chart fade-in" style="margin-top: 48px;">
+        <!-- Level 1: Direction -->
+        <div class="cards-grid" style="--cols: 1; max-width: 500px; margin: 0 auto;">
+          <div class="card" style="text-align: center; border-top: 4px solid var(--primary);">
+            <div class="card__icon"><i class="fas fa-chess-king"></i></div>
+            <h3 class="card__title">Dirección General</h3>
+            <p class="card__text">
+              Liderazgo estratégico del programa, coordinación con Buenaventura, 
+              representación institucional y toma de decisiones de alto nivel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Level 2: Core Team -->
+        <div class="cards-grid fade-in" style="--cols: 3; margin-top: 32px;">
+          <div class="card" style="text-align: center; border-top: 4px solid #2980b9;">
+            <div class="card__icon" style="color: #2980b9;"><i class="fas fa-clipboard-check"></i></div>
+            <h3 class="card__title">Coordinación Técnica</h3>
+            <p class="card__text">
+              Diseño pedagógico de las intervenciones, desarrollo de materiales, 
+              supervisión de la calidad de la implementación.
+            </p>
+          </div>
+          <div class="card" style="text-align: center; border-top: 4px solid #27ae60;">
+            <div class="card__icon" style="color: #27ae60;"><i class="fas fa-chart-bar"></i></div>
+            <h3 class="card__title">Evaluación e Investigación</h3>
+            <p class="card__text">
+              Diseño del banco de ítems, aplicación de evaluaciones, análisis de datos, 
+              reporte de resultados y gestión de la plataforma digital.
+            </p>
+          </div>
+          <div class="card" style="text-align: center; border-top: 4px solid #f39c12;">
+            <div class="card__icon" style="color: #f39c12;"><i class="fas fa-cogs"></i></div>
+            <h3 class="card__title">Coordinación Operativa</h3>
+            <p class="card__text">
+              Logística, relaciones con las UGEL, gestión administrativa, 
+              comunicaciones y cronogramas de campo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Level 3: Field Teams -->
+        <div class="section-header fade-in" style="margin-top: 64px;">
+          <span class="section-header__label">Equipos de campo</span>
+          <h2 class="section-header__title">Presencia en cada región</h2>
+        </div>
+
+        <div class="cards-grid fade-in" style="--cols: 2; margin-top: 32px;">
+          <div class="card">
+            <div class="card__icon" style="color: #2980b9;"><i class="fas fa-chalkboard-teacher"></i></div>
+            <h3 class="card__title">Tutores REPASO+</h3>
+            <p class="card__text">
+              Profesionales de educación que trabajan directamente con los estudiantes en sesiones 
+              de tutoría remedial. Cada tutor maneja grupos reducidos (1:3, 1:5 o 1:7) y está 
+              capacitado en las metodologías del programa. Presentes en Pasco, Lima Provincias, 
+              Arequipa y Huancavelica.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card__icon" style="color: #9b59b6;"><i class="fas fa-hands-helping"></i></div>
+            <h3 class="card__title">Acompañantes Pedagógicas WAWAKUNAPAC</h3>
+            <p class="card__text">
+              Especialistas en educación inicial y enfoque Pikler que realizan visitas semanales 
+              presenciales a las docentes de educación inicial en Ichuña, Moquegua. Facilitan 
+              talleres formativos con familias y modelan sesiones de clase.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card__icon" style="color: #27ae60;"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="card__title">Equipo AMELIA</h3>
+            <p class="card__text">
+              Especialistas en tecnología educativa e inteligencia artificial responsables de 
+              la plataforma AMELIA. Acompañan virtualmente a los docentes STEAM en Pasco y 
+              Lima Provincias.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card__icon" style="color: #f39c12;"><i class="fas fa-users-cog"></i></div>
+            <h3 class="card__title">Coordinadores Regionales</h3>
+            <p class="card__text">
+              Responsables de la articulación con las UGEL, el monitoreo de campo y la 
+              coordinación logística en cada región. Son el enlace entre el equipo central 
+              y las escuelas participantes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERFIL DEL TUTOR ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="split fade-in">
+        <div class="split__image">
+          <img src="img/latino%20adolescents%20playing%20footbal%20in%20rural%20area.jpg" alt="Interacción educativa en zona rural">
+        </div>
+        <div class="split__content">
+          <span class="section-header__label">Perfil del tutor</span>
+          <h2>Profesionales comprometidos con la educación rural</h2>
+          <p>
+            Los tutores del Programa HANAQ son profesionales seleccionados por su experiencia 
+            en educación primaria, su capacidad de trabajo en contextos rurales y su compromiso 
+            con la mejora educativa.
+          </p>
+          <div class="features-list" style="margin-top: 24px;">
+            <div class="feature-item">
+              <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 12px;"></i>
+              <span>Formación en educación primaria o pedagogía</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 12px;"></i>
+              <span>Experiencia en enseñanza en escuelas multigrado</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 12px;"></i>
+              <span>Capacitación en metodologías de tutoría remedial HANAQ</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 12px;"></i>
+              <span>Conocimiento del CNEB y las competencias priorizadas</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 12px;"></i>
+              <span>Habilidades interculturales y sensibilidad hacia las comunidades rurales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPACITACIÓN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Formación</span>
+        <h2 class="section-header__title">Capacitación continua del equipo</h2>
+        <p class="section-header__text">
+          El programa invierte en la formación permanente de su equipo de campo, con 
+          capacitaciones presenciales e intensivas antes y durante la implementación.
+        </p>
+      </div>
+
+      <div class="cards-grid fade-in" style="--cols: 3; margin-top: 40px;">
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3 class="card__title">Inducción inicial</h3>
+          <p class="card__text">
+            Formación intensiva que incluye los fundamentos pedagógicos del programa, 
+            uso de materiales y protocolos de sesión.
+          </p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-sync-alt"></i></div>
+          <h3 class="card__title">Acompañamiento continuo</h3>
+          <p class="card__text">
+            Supervisión periódica en campo, retroalimentación formativa y reuniones 
+            de equipo para intercambiar aprendizajes.
+          </p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="card__title">Especialización</h3>
+          <p class="card__text">
+            Para WAWAKUNAPAC: formación en enfoque Pikler. Para AMELIA: capacitación 
+            en herramientas de IA educativa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-header__title">Únete al equipo</h2>
+        <p class="section-header__text">
+          Si tienes experiencia en educación y te apasiona trabajar en innovación educativa 
+          para comunidades rurales, nos encantaría conocerte.
+        </p>
+        <div style="margin-top: 24px;">
+          <a href="index.html#contacto" class="btn btn--primary">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color: white;">
+            <img src="img/logo_edited.png" alt="LIDES" style="filter: brightness(10);">
+            <span>LIDES</span>
+          </a>
+          <p>Laboratorio de Innovación en Desarrollo Educativo y Social. Ejecutor del Programa HANAQ en alianza con Buenaventura.</p>
+        </div>
+        <div>
+          <h4>Programa HANAQ</h4>
+          <ul class="footer__links">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="sobre.html">Nosotros</a></li>
+            <li><a href="regiones.html">Regiones</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:info@lides.pe"><i class="fas fa-envelope"></i> info@lides.pe</a></li>
+            <li><a href="https://evaluacion.lides.pe"><i class="fas fa-chart-bar"></i> evaluacion.lides.pe</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/lideslab" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@lideslab" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/lideslab" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 LIDES LAB. Todos los derechos reservados.</p>
+        <div><a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

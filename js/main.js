@@ -12,9 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('active');
     });
 
-    // Close menu when clicking a link
+    // Close menu when clicking a link (but not dropdown parent)
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        // Don't close if it's a dropdown toggle on mobile
+        const parent = link.closest('.nav__dropdown');
+        if (parent && window.innerWidth <= 768) {
+          const dropdownMenu = parent.querySelector('.nav__dropdown-menu');
+          if (dropdownMenu && link === parent.querySelector(':scope > a')) {
+            // On mobile, toggle dropdown instead of navigating
+            e.preventDefault();
+            parent.classList.toggle('active');
+            return;
+          }
+        }
         navToggle.classList.remove('active');
         navLinks.classList.remove('active');
       });

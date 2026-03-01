@@ -4,20 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LIDES - Laboratorio de Innovación en Desarrollo Educativo y Social</title>
-  <meta name="description" content="LIDES es un laboratorio dedicado a la innovación en educación y temas sociales. Diseñamos, investigamos y acompañamos procesos que elevan los estándares de aprendizaje.">
+  <meta name="description" content="LIDES opera el Programa HANAQ: innovación educativa en escuelas rurales del Perú. 4 intervenciones, 5 regiones, 49+ escuelas. En alianza con Buenaventura.">
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Favicon -->
   <link rel="icon" href="img/logo_edited.png" type="image/png">
 </head>
 <body>
@@ -32,9 +25,20 @@
 
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="sobre.html">Sobre Nosotros</a></li>
-        <li><a href="#evidencia">Evidencia</a></li>
-        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="sobre.html">Nosotros</a></li>
+        <li class="nav__dropdown">
+          <a href="programa.html">Programa HANAQ <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
+        </li>
+        <li><a href="regiones.html">Regiones</a></li>
+        <li><a href="evaluacion.html">Evaluación</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
@@ -53,130 +57,216 @@
     </div>
     <div class="container">
       <div class="hero__content fade-in">
-        <p class="hero__subtitle">LIDES LAB</p>
-        <h1 class="hero__title">Laboratorio de Innovación en Desarrollo Educativo y Social</h1>
+        <p class="hero__subtitle">Programa HANAQ</p>
+        <h1 class="hero__title">Innovación educativa para las comunidades rurales del Perú</h1>
         <p class="hero__description">
-          Diseñamos, investigamos y acompañamos procesos que elevan los estándares de aprendizaje, 
-          identificando las mejores prácticas para nuestros beneficiarios.
+          HANAQ —<em>hermoso, bueno, valioso</em> en quechua— es un laboratorio de innovación 
+          que transforma la educación en escuelas rurales multigrado a través de cuatro 
+          intervenciones basadas en evidencia.
         </p>
         <div class="hero__actions">
-          <a href="sobre.html" class="btn btn--primary">Conócenos</a>
-          <a href="#contacto" class="btn btn--outline">Contáctanos</a>
+          <a href="programa.html" class="btn btn--primary">Conoce el programa</a>
+          <a href="#impacto" class="btn btn--outline">Nuestro impacto</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ¿QUIÉNES SOMOS? ===== -->
-  <section class="section" id="quienes-somos">
+  <!-- ===== CIFRAS CLAVE ===== -->
+  <section class="section" id="impacto">
+    <div class="container">
+      <div class="stats fade-in">
+        <div class="stat">
+          <div class="stat__number">4</div>
+          <div class="stat__label">Intervenciones</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">5</div>
+          <div class="stat__label">Regiones del Perú</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">8</div>
+          <div class="stat__label">UGEL articuladas</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">49+</div>
+          <div class="stat__label">Escuelas rurales</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUIÉNES SOMOS ===== -->
+  <section class="section section--alt">
     <div class="container">
       <div class="split fade-in">
         <div class="split__image">
-          <img src="img/latino%20adolescents%20playing%20footbal%20in%20rural%20area.jpg" alt="Comunidades educativas en Perú">
+          <img src="img/latino%20adolescents%20playing%20footbal%20in%20rural%20area.jpg" alt="Estudiantes en zona rural del Perú">
         </div>
         <div class="split__content">
           <span class="section-header__label">¿Quiénes somos?</span>
-          <h2>Innovación para la educación y el desarrollo social</h2>
+          <h2>LIDES: Laboratorio de Innovación en Desarrollo Educativo y Social</h2>
           <p>
-            LIDES es un laboratorio dedicado a la innovación en educación y temas sociales. 
-            Nos enfocamos en diseñar, investigar y acompañar procesos que elevan los estándares 
-            de aprendizaje, identificando las mejores prácticas para nuestros beneficiarios.
+            Somos una organización dedicada a la innovación en educación y temas sociales. 
+            Diseñamos, investigamos y acompañamos procesos que elevan los estándares de 
+            aprendizaje en comunidades rurales del Perú.
           </p>
           <p>
-            Trabajamos en conjunto con diversas organizaciones y sectores para crear 
-            oportunidades sostenibles y transformar vidas en comunidades de todo el Perú.
+            En alianza con <strong>Buenaventura</strong>, operamos el <strong>Programa HANAQ</strong>, 
+            que interviene en escuelas rurales multigrado de cinco regiones del país con un enfoque 
+            basado en evidencia y alineado al Currículo Nacional de Educación Básica (CNEB).
           </p>
-          <a href="sobre.html" class="btn btn--dark" style="margin-top: 12px;">Más información →</a>
+          <a href="sobre.html" class="btn btn--dark" style="margin-top: 12px;">Conócenos →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== MISIÓN ===== -->
-  <section class="section section--alt">
+  <!-- ===== LAS 4 INTERVENCIONES ===== -->
+  <section class="section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-header__label">Nuestra Misión</span>
-        <h2 class="section-header__title">Empoderando comunidades a través de la educación</h2>
+        <span class="section-header__label">Programa HANAQ</span>
+        <h2 class="section-header__title">Cuatro intervenciones, un solo objetivo</h2>
         <p class="section-header__text">
-          LIDES se compromete a promover el desarrollo integral de las comunidades a través de la educación, 
-          la investigación y la colaboración.
+          Cada intervención atiende una dimensión clave del desarrollo educativo, desde la tutoría 
+          remedial hasta la innovación tecnológica y el acompañamiento en primera infancia.
         </p>
       </div>
 
       <div class="cards-grid fade-in">
-        <div class="card">
-          <div class="card__icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3 class="card__title">Educación de Calidad</h3>
+        <a href="programa.html#repaso" class="card card--link">
+          <div class="card__icon"><i class="fas fa-book-open"></i></div>
+          <h3 class="card__title">REPASO+</h3>
           <p class="card__text">
-            Empoderamos a las personas para que alcancen su máximo potencial, promoviendo 
-            prácticas educativas basadas en evidencia.
+            Tutoría remedial en Comunicación y Matemática para estudiantes de 3.° a 6.° de primaria. 
+            Sesiones personalizadas con ratios de 1:3 a 1:7, diseñadas para cerrar brechas de aprendizaje.
           </p>
-        </div>
-        <div class="card">
-          <div class="card__icon"><i class="fas fa-chart-line"></i></div>
-          <h3 class="card__title">Investigación Rigurosa</h3>
+          <span class="card__tag">Pasco · Lima · Arequipa · Huancavelica</span>
+        </a>
+
+        <a href="programa.html#amelia" class="card card--link">
+          <div class="card__icon"><i class="fas fa-robot"></i></div>
+          <h3 class="card__title">AMELIA</h3>
           <p class="card__text">
-            Desarrollamos evidencia sólida para fortalecer la educación a través de la 
-            investigación rigurosa y prácticas fundamentadas en datos.
+            Plataforma de inteligencia artificial para la formación docente en STEAM. 
+            Asistente vía WhatsApp que acompaña a los docentes con certificación 
+            de 60, 90 y 120 horas.
           </p>
-        </div>
-        <div class="card">
-          <div class="card__icon"><i class="fas fa-hands-helping"></i></div>
-          <h3 class="card__title">Impacto Social</h3>
+          <span class="card__tag">Pasco · Lima Provincias</span>
+        </a>
+
+        <a href="programa.html#wawakunapac" class="card card--link">
+          <div class="card__icon"><i class="fas fa-child"></i></div>
+          <h3 class="card__title">WAWAKUNAPAC</h3>
           <p class="card__text">
-            Fomentamos un impacto positivo en la sociedad, creando oportunidades sostenibles 
-            y transformando vidas en las comunidades.
+            Programa de formación continua para docentes de educación inicial, basado en el 
+            enfoque Pikler. Incluye acompañamiento semanal presencial y talleres con familias.
           </p>
-        </div>
+          <span class="card__tag">Moquegua · Ichuña</span>
+        </a>
+
+        <a href="programa.html#creer" class="card card--link">
+          <div class="card__icon"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="card__title">CREER</h3>
+          <p class="card__text">
+            Intervención educativa en comunidades rurales de Cajamarca, trabajando con 
+            10 escuelas en tres UGEL para fortalecer el aprendizaje y la gestión escolar.
+          </p>
+          <span class="card__tag">Cajamarca · Hualgayoc · San Miguel · Santa Cruz</span>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="programa.html" class="btn btn--dark">Ver detalles del programa →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== EVIDENCIA ===== -->
-  <section class="section" id="evidencia">
+  <!-- ===== MAPA DE REGIONES ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Dónde trabajamos</span>
+        <h2 class="section-header__title">5 regiones, 8 UGEL, 49+ escuelas</h2>
+      </div>
+
+      <div class="regions-grid fade-in">
+        <div class="region-card">
+          <div class="region-card__icon"><i class="fas fa-mountain"></i></div>
+          <h4>Pasco</h4>
+          <p>UGEL Daniel Alcides Carrión</p>
+          <span class="region-card__interventions">AMELIA · REPASO+</span>
+        </div>
+        <div class="region-card">
+          <div class="region-card__icon"><i class="fas fa-city"></i></div>
+          <h4>Lima Provincias</h4>
+          <p>UGEL N° 14 Oyón</p>
+          <span class="region-card__interventions">AMELIA · REPASO+</span>
+        </div>
+        <div class="region-card">
+          <div class="region-card__icon"><i class="fas fa-volcano"></i></div>
+          <h4>Arequipa</h4>
+          <p>UGEL Caylloma · UGEL Castilla</p>
+          <span class="region-card__interventions">REPASO+</span>
+        </div>
+        <div class="region-card">
+          <div class="region-card__icon"><i class="fas fa-water"></i></div>
+          <h4>Huancavelica</h4>
+          <p>UGEL Angaraes</p>
+          <span class="region-card__interventions">REPASO+</span>
+        </div>
+        <div class="region-card">
+          <div class="region-card__icon"><i class="fas fa-tree"></i></div>
+          <h4>Cajamarca</h4>
+          <p>UGEL Hualgayoc · San Miguel · Santa Cruz</p>
+          <span class="region-card__interventions">CREER</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="regiones.html" class="btn btn--dark">Ver todas las escuelas →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVIDENCIA / EVALUACIÓN ===== -->
+  <section class="section">
     <div class="container">
       <div class="split fade-in" style="direction: rtl;">
         <div class="split__image" style="direction: ltr;">
-          <img src="img/12-14-year-old%20children%20playing%20in%20the%20playground%20area%20in%20rural%20area%20in%20Peru.jpg" alt="Evidencia en la escuela">
+          <img src="img/12-14-year-old%20children%20playing%20in%20the%20playground%20area%20in%20rural%20area%20in%20Peru.jpg" alt="Estudiantes en escuela rural">
         </div>
         <div class="split__content" style="direction: ltr;">
-          <span class="section-header__label">Evidencia en la escuela</span>
-          <h2>Investigación fundamentada en datos para mejores resultados</h2>
+          <span class="section-header__label">Evaluación basada en evidencia</span>
+          <h2>Medimos el impacto con rigor científico</h2>
           <p>
-            Nuestro foco se centra en el desarrollo de evidencia sólida y su uso en el ámbito 
-            educativo. Estamos convencidos de que la educación se fortalece a través de la 
-            investigación rigurosa y prácticas fundamentadas en datos.
+            Nuestro sistema de evaluación incluye un <strong>banco de 480 ítems</strong> en 
+            Comunicación y Matemática, alineados al CNEB y diseñados con estándares similares 
+            a la Evaluación Nacional de Logros de Aprendizaje (ENLA).
           </p>
           <p>
-            Trabajamos directamente con escuelas y docentes para implementar soluciones 
-            que generan resultados medibles y sostenibles.
+            Evaluamos en <strong>tres momentos</strong> —línea de base, evaluación intermedia y 
+            línea de salida— con <strong>grupo de control</strong> para aislar el efecto real 
+            de las intervenciones.
           </p>
+          <a href="evaluacion.html" class="btn btn--dark" style="margin-top: 12px;">Metodología de evaluación →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ESTADÍSTICAS ===== -->
+  <!-- ===== ALIANZA ===== -->
   <section class="section section--alt">
     <div class="container">
-      <div class="stats fade-in">
-        <div class="stat">
-          <div class="stat__number">6</div>
-          <div class="stat__label">Regiones del Perú</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">24</div>
-          <div class="stat__label">Países con impacto</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">100+</div>
-          <div class="stat__label">Escuelas rurales</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">1000+</div>
-          <div class="stat__label">Beneficiarios</div>
-        </div>
+      <div class="section-header fade-in">
+        <span class="section-header__label">Alianza estratégica</span>
+        <h2 class="section-header__title">En colaboración con Buenaventura</h2>
+        <p class="section-header__text">
+          Buenaventura crea el Programa HANAQ como parte de su compromiso con el desarrollo 
+          educativo de las comunidades en sus zonas de influencia. LIDES es el ejecutor técnico, 
+          aportando diseño, implementación y evaluación con estándares de calidad.
+        </p>
       </div>
     </div>
   </section>
@@ -185,33 +275,48 @@
   <section class="section" id="noticias">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-header__label">Noticias Recientes</span>
-        <h2 class="section-header__title">Lo último de LIDES</h2>
+        <span class="section-header__label">Noticias</span>
+        <h2 class="section-header__title">Lo último del Programa HANAQ</h2>
       </div>
 
       <div class="news-grid fade-in">
         <div class="news-card">
-          <div class="news-card__image" style="background-image: url('img/Home-Welcome-1.jpg'); background-color: var(--bg-section);"></div>
+          <div class="news-card__image" style="background-image: url('img/Home-Welcome-1.jpg');"></div>
           <div class="news-card__body">
-            <span class="news-card__date">Proyecto destacado</span>
-            <h3 class="news-card__title">Laboratorio Hanaq en seis regiones del Perú</h3>
+            <span class="news-card__date">Marzo 2026</span>
+            <h3 class="news-card__title">Inicio de capacitación WAWAKUNAPAC en Ichuña</h3>
             <p class="news-card__text">
-              En colaboración con Minera Buenaventura, el proyecto Hanaq se lleva a cabo en 
-              escuelas rurales, brindando oportunidades educativas y fomentando el desarrollo local.
+              Las acompañantes pedagógicas completan su formación intensiva los días 13 y 14 de marzo, 
+              preparándose para iniciar las visitas semanales a docentes de educación inicial.
             </p>
           </div>
         </div>
         <div class="news-card">
           <div class="news-card__image" style="background-color: var(--bg-section);"></div>
           <div class="news-card__body">
-            <span class="news-card__date">Actualización</span>
-            <h3 class="news-card__title">Nuevas alianzas para la educación rural</h3>
+            <span class="news-card__date">Febrero 2026</span>
+            <h3 class="news-card__title">Convenios formalizados con 8 UGEL</h3>
             <p class="news-card__text">
-              Trabajamos por un futuro más brillante y sostenible para nuestras comunidades, 
-              estableciendo nuevas colaboraciones estratégicas.
+              Se completó la formalización de convenios en las 8 UGEL participantes, 
+              con cartas de comunicación emitidas a todas las instituciones educativas focalizadas.
             </p>
           </div>
         </div>
+        <div class="news-card">
+          <div class="news-card__image" style="background-color: var(--bg-section);"></div>
+          <div class="news-card__body">
+            <span class="news-card__date">Enero 2026</span>
+            <h3 class="news-card__title">Diseño completo de las cuatro intervenciones</h3>
+            <p class="news-card__text">
+              REPASO+, AMELIA, WAWAKUNAPAC y CREER: las cuatro intervenciones del programa 
+              finalizan su etapa de diseño y entran en fase de implementación.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="noticias.html" class="btn btn--dark">Todas las noticias →</a>
       </div>
     </div>
   </section>
@@ -221,17 +326,17 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-header__label">Contáctanos</span>
-        <h2 class="section-header__title">¡Nos encantaría saber de ti!</h2>
+        <h2 class="section-header__title">¿Quieres saber más sobre HANAQ?</h2>
         <p class="section-header__text">
-          Si tienes alguna pregunta, comentario o necesitas más información, 
-          no dudes en ponerte en contacto con nosotros.
+          Si eres docente, investigador, autoridad educativa o representas a una organización 
+          interesada en nuestro trabajo, escríbenos.
         </p>
       </div>
 
       <div class="contact-grid fade-in">
         <div class="contact-info">
           <h3>Información de contacto</h3>
-          <p>Estamos aquí para ayudarte y responder tus consultas. ¡Esperamos tu mensaje!</p>
+          <p>Estamos aquí para responder tus consultas sobre el programa, alianzas y colaboraciones.</p>
           
           <div class="contact-info__item">
             <i class="fas fa-envelope"></i>
@@ -259,6 +364,18 @@
             <input type="email" id="email" name="email" required placeholder="tu@email.com">
           </div>
           <div class="form-group">
+            <label for="subject">Asunto</label>
+            <select id="subject" name="subject" style="width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:8px; font-size:0.95rem; font-family:inherit; background:var(--bg-light);">
+              <option value="">Selecciona un asunto</option>
+              <option value="REPASO+">REPASO+ — Tutoría remedial</option>
+              <option value="AMELIA">AMELIA — IA para docentes</option>
+              <option value="WAWAKUNAPAC">WAWAKUNAPAC — Educación inicial</option>
+              <option value="CREER">CREER</option>
+              <option value="Alianzas">Alianzas y colaboración</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="message">Mensaje</label>
             <textarea id="message" name="message" required placeholder="¿En qué podemos ayudarte?"></textarea>
           </div>
@@ -274,7 +391,7 @@
   <section class="newsletter">
     <div class="container fade-in">
       <h2>Sé el primero en estar enterado</h2>
-      <p>Inscríbete en nuestro newsletter para estar informado</p>
+      <p>Recibe actualizaciones sobre el Programa HANAQ y nuestro impacto educativo</p>
       <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input type="email" name="email" placeholder="Tu correo electrónico" required>
         <button type="submit">Suscribirme</button>
@@ -291,31 +408,35 @@
             <img src="img/logo_edited.png" alt="LIDES" style="filter: brightness(10);">
             <span>LIDES</span>
           </a>
-          <p>Laboratorio de Innovación en Desarrollo Educativo y Social. Transformando vidas a través de la educación y la investigación.</p>
+          <p>Laboratorio de Innovación en Desarrollo Educativo y Social. Ejecutor del Programa HANAQ en alianza con Buenaventura.</p>
+        </div>
+
+        <div>
+          <h4>Programa HANAQ</h4>
+          <ul class="footer__links">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
         </div>
 
         <div>
           <h4>Navegación</h4>
           <ul class="footer__links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre.html">Sobre Nosotros</a></li>
-            <li><a href="#evidencia">Evidencia</a></li>
-            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="sobre.html">Nosotros</a></li>
+            <li><a href="regiones.html">Regiones</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Legal</h4>
-          <ul class="footer__links">
-            <li><a href="terminos.html">Términos y condiciones</a></li>
-            <li><a href="privacidad.html">Política de privacidad</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Contáctanos</h4>
+          <h4>Contacto</h4>
           <ul class="footer__links">
             <li><a href="mailto:info@lides.pe"><i class="fas fa-envelope"></i> info@lides.pe</a></li>
+            <li><a href="https://evaluacion.lides.pe"><i class="fas fa-chart-bar"></i> evaluacion.lides.pe</a></li>
           </ul>
           <div class="social-links">
             <a href="https://www.facebook.com/lideslab" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -327,11 +448,13 @@
 
       <div class="footer__bottom">
         <p>&copy; 2026 LIDES LAB. Todos los derechos reservados.</p>
+        <div>
+          <a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>

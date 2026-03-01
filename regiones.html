@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regiones - Programa HANAQ - LIDES</title>
+  <meta name="description" content="El Programa HANAQ opera en 5 regiones del Perú: Pasco, Lima Provincias, Arequipa, Huancavelica y Cajamarca. Conoce las 49+ escuelas rurales participantes.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo_edited.png" type="image/png">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <img src="img/logo_edited.png" alt="LIDES Logo">
+        <span>LIDES</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre.html">Nosotros</a></li>
+        <li class="nav__dropdown">
+          <a href="programa.html">Programa HANAQ <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
+        </li>
+        <li><a href="regiones.html" class="active">Regiones</a></li>
+        <li><a href="evaluacion.html">Evaluación</a></li>
+        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <p class="page-header__label">Dónde trabajamos</p>
+      <h1>5 regiones, 8 UGEL, 49+ escuelas rurales</h1>
+      <p class="page-header__description">
+        El Programa HANAQ opera en escuelas rurales multigrado en cinco regiones del Perú, 
+        articulando esfuerzos con 8 Unidades de Gestión Educativa Local (UGEL).
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MAPA RESUMEN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="regions-grid regions-grid--large fade-in">
+
+        <!-- PASCO -->
+        <div class="region-card region-card--expanded" id="pasco">
+          <div class="region-card__header">
+            <div class="region-card__icon"><i class="fas fa-mountain"></i></div>
+            <div>
+              <h3>Pasco</h3>
+              <span class="region-card__interventions">AMELIA · REPASO+</span>
+            </div>
+          </div>
+          <div class="region-card__body">
+            <h4>UGEL Daniel Alcides Carrión</h4>
+            <p>Escuelas de la intervención AMELIA y REPASO+ en la provincia de Daniel Alcides Carrión.</p>
+            <div class="school-list">
+              <h5>Escuelas AMELIA (5)</h5>
+              <ul>
+                <li>I.E. N° 34068 — Tusi</li>
+                <li>I.E. N° 34070 — Tusi</li>
+                <li>I.E. N° 34045 — Goyllarisquizga</li>
+                <li>I.E. N° 34082 — Yanahuanca</li>
+                <li>I.E. N° 34083 — Yanahuanca</li>
+              </ul>
+              <h5>Escuelas REPASO+ (varias)</h5>
+              <p class="school-list__note">Escuelas multigrado de primaria focalizadas por la UGEL DAC.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIMA PROVINCIAS -->
+        <div class="region-card region-card--expanded" id="lima">
+          <div class="region-card__header">
+            <div class="region-card__icon"><i class="fas fa-city"></i></div>
+            <div>
+              <h3>Lima Provincias</h3>
+              <span class="region-card__interventions">AMELIA · REPASO+</span>
+            </div>
+          </div>
+          <div class="region-card__body">
+            <h4>UGEL N° 14 Oyón</h4>
+            <p>Escuelas de la intervención AMELIA y REPASO+ en la provincia de Oyón, Lima.</p>
+            <div class="school-list">
+              <h5>Escuelas AMELIA (4)</h5>
+              <ul>
+                <li>I.E. N° 20066 — Oyón</li>
+                <li>I.E. N° 20068 — Oyón</li>
+                <li>I.E. N° 20071 — Oyón</li>
+                <li>I.E. N° 20085 — Oyón</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AREQUIPA -->
+        <div class="region-card region-card--expanded" id="arequipa">
+          <div class="region-card__header">
+            <div class="region-card__icon"><i class="fas fa-volcano"></i></div>
+            <div>
+              <h3>Arequipa</h3>
+              <span class="region-card__interventions">REPASO+</span>
+            </div>
+          </div>
+          <div class="region-card__body">
+            <h4>UGEL Caylloma</h4>
+            <p>Escuelas multigrado de primaria en la provincia de Caylloma, zona altoandina de Arequipa.</p>
+            <div class="school-list">
+              <h5>Escuelas focalizadas</h5>
+              <ul>
+                <li>I.E. N° 40337 — Caylloma</li>
+                <li>I.E. N° 40355 — Caylloma</li>
+                <li>I.E. N° 40362 — Caylloma</li>
+                <li>I.E. N° 40389 — Caylloma</li>
+                <li>I.E. N° 40397 — Caylloma</li>
+                <li>I.E. N° 40406 — Caylloma</li>
+              </ul>
+            </div>
+            <h4 style="margin-top: 24px;">UGEL Castilla</h4>
+            <p>Escuelas en la provincia de Castilla, Arequipa.</p>
+            <div class="school-list">
+              <h5>Escuelas focalizadas</h5>
+              <ul>
+                <li>I.E. N° 40230 — Castilla</li>
+                <li>I.E. N° 40244 — Castilla</li>
+                <li>I.E. N° 40253 — Castilla</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- HUANCAVELICA -->
+        <div class="region-card region-card--expanded" id="huancavelica">
+          <div class="region-card__header">
+            <div class="region-card__icon"><i class="fas fa-water"></i></div>
+            <div>
+              <h3>Huancavelica</h3>
+              <span class="region-card__interventions">REPASO+</span>
+            </div>
+          </div>
+          <div class="region-card__body">
+            <h4>UGEL Angaraes</h4>
+            <p>Escuelas multigrado de primaria en la provincia de Angaraes, Huancavelica.</p>
+            <div class="school-list">
+              <h5>Escuelas focalizadas</h5>
+              <ul>
+                <li>I.E. N° 36003 — Angaraes</li>
+                <li>I.E. N° 36114 — Angaraes</li>
+                <li>I.E. N° 36130 — Angaraes</li>
+                <li>I.E. N° 36229 — Angaraes</li>
+                <li>I.E. N° 36284 — Angaraes</li>
+                <li>I.E. N° 36359 — Angaraes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAJAMARCA -->
+        <div class="region-card region-card--expanded" id="cajamarca">
+          <div class="region-card__header">
+            <div class="region-card__icon"><i class="fas fa-tree"></i></div>
+            <div>
+              <h3>Cajamarca</h3>
+              <span class="region-card__interventions">CREER</span>
+            </div>
+          </div>
+          <div class="region-card__body">
+            <h4>UGEL Hualgayoc</h4>
+            <p>6 escuelas de la intervención CREER en la provincia de Hualgayoc.</p>
+            <div class="school-list">
+              <h5>Escuelas CREER (6)</h5>
+              <ul>
+                <li>I.E. N° 82673 — Hualgayoc</li>
+                <li>I.E. N° 82674 — Hualgayoc</li>
+                <li>I.E. N° 82676 — Hualgayoc</li>
+                <li>I.E. N° 82683 — Hualgayoc</li>
+                <li>I.E. N° 82690 — Hualgayoc</li>
+                <li>I.E. N° 82696 — Hualgayoc</li>
+              </ul>
+            </div>
+
+            <h4 style="margin-top: 24px;">UGEL San Miguel</h4>
+            <div class="school-list">
+              <h5>Escuelas CREER (3)</h5>
+              <ul>
+                <li>I.E. N° 82445 — San Miguel</li>
+                <li>I.E. N° 82452 — San Miguel</li>
+                <li>I.E. N° 82460 — San Miguel</li>
+              </ul>
+            </div>
+
+            <h4 style="margin-top: 24px;">UGEL Santa Cruz</h4>
+            <div class="school-list">
+              <h5>Escuelas CREER (1)</h5>
+              <ul>
+                <li>I.E. N° 82510 — Santa Cruz</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOQUEGUA (WAWAKUNAPAC) ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Programa WAWAKUNAPAC</span>
+        <h2 class="section-header__title">Moquegua — Distrito de Ichuña</h2>
+        <p class="section-header__text">
+          La intervención WAWAKUNAPAC opera en el distrito de Ichuña, provincia General Sánchez Cerro, 
+          región Moquegua. Se trabaja con instituciones de educación inicial del área rural, 
+          acompañando a docentes y familias en el desarrollo de los niños.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO DE ARTICULACIÓN ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__label">Proceso</span>
+        <h2 class="section-header__title">Articulación con las UGEL</h2>
+        <p class="section-header__text">
+          La formalización con cada UGEL sigue un proceso estructurado que garantiza la alineación 
+          institucional y el compromiso con la mejora educativa.
+        </p>
+      </div>
+
+      <div class="cards-grid fade-in" style="--cols: 4; margin-top: 40px;">
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-handshake"></i></div>
+          <h3 class="card__title">1. Convenio</h3>
+          <p class="card__text">Firma del convenio de cooperación entre LIDES y cada UGEL participante.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-envelope-open-text"></i></div>
+          <h3 class="card__title">2. Comunicación</h3>
+          <p class="card__text">Emisión de cartas oficiales a las instituciones educativas focalizadas.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-user-tie"></i></div>
+          <h3 class="card__title">3. Coordinación</h3>
+          <p class="card__text">Articulación con Especialistas de Educación Primaria de cada UGEL.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div class="card__icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="card__title">4. Implementación</h3>
+          <p class="card__text">Inicio de las intervenciones en cada escuela focalizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color: white;">
+            <img src="img/logo_edited.png" alt="LIDES" style="filter: brightness(10);">
+            <span>LIDES</span>
+          </a>
+          <p>Laboratorio de Innovación en Desarrollo Educativo y Social. Ejecutor del Programa HANAQ en alianza con Buenaventura.</p>
+        </div>
+        <div>
+          <h4>Programa HANAQ</h4>
+          <ul class="footer__links">
+            <li><a href="programa.html#repaso">REPASO+</a></li>
+            <li><a href="programa.html#amelia">AMELIA</a></li>
+            <li><a href="programa.html#wawakunapac">WAWAKUNAPAC</a></li>
+            <li><a href="programa.html#creer">CREER</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="sobre.html">Nosotros</a></li>
+            <li><a href="regiones.html">Regiones</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:info@lides.pe"><i class="fas fa-envelope"></i> info@lides.pe</a></li>
+            <li><a href="https://evaluacion.lides.pe"><i class="fas fa-chart-bar"></i> evaluacion.lides.pe</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/lideslab" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@lideslab" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/lideslab" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 LIDES LAB. Todos los derechos reservados.</p>
+        <div><a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
