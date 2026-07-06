@@ -1261,3 +1261,377 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ===== NUEVOS COMPONENTES 2026 ===== */
+
+/* --- Methodology Flow Infographic --- */
+.methodology-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+  margin: 48px 0 16px;
+}
+
+.methodology-flow::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(10% + 12px);
+  right: calc(10% + 12px);
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  z-index: 0;
+}
+
+.methodology-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.methodology-step__bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(26, 58, 92, 0.3);
+  transition: background var(--transition), transform var(--transition);
+  border: 4px solid var(--white);
+}
+
+.methodology-step:hover .methodology-step__bubble {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.methodology-step__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.methodology-step__desc {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+/* --- Ally Logos Grid --- */
+.allies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.ally-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.ally-logo__img {
+  height: 72px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter var(--transition), transform var(--transition);
+}
+
+.ally-logo__img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.ally-logo__placeholder {
+  height: 64px;
+  min-width: 160px;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-light);
+  background: var(--bg-section);
+  padding: 0 16px;
+}
+
+.ally-logo__name {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* --- Consultant Photo Cards --- */
+.consultants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.consultant-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 16px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.consultant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.consultant-card__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  background: var(--bg-section);
+  border: 3px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--text-light);
+  font-size: 2.5rem;
+}
+
+.consultant-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.consultant-card__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.consultant-card__region {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.consultant-card__role {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+/* --- Service Pillars (servicios.html) --- */
+.service-pillar {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--primary);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-pillar:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-pillar--accent { border-top-color: var(--accent); }
+.service-pillar--green  { border-top-color: #27ae60; }
+
+.service-pillar__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--bg-section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.service-pillar--accent .service-pillar__icon { color: var(--accent); }
+.service-pillar--green  .service-pillar__icon { color: #27ae60; }
+
+.service-pillar__title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.service-pillar__desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.service-pillar__items {
+  list-style: none;
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.service-pillar__items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--bg-section);
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.service-pillar__items li:last-child {
+  border-bottom: none;
+}
+
+.service-pillar__items li i {
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.service-pillar          .service-pillar__items li i { color: var(--primary); }
+.service-pillar--accent  .service-pillar__items li i { color: var(--accent); }
+.service-pillar--green   .service-pillar__items li i { color: #27ae60; }
+
+/* --- Platform Preview --- */
+.platform-preview {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius);
+  padding: 48px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.platform-preview h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: 16px 0 8px;
+}
+
+.platform-preview p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+  max-width: 320px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* --- Evidence "Próximamente" Cards --- */
+.evidence-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.evidence-card__icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  opacity: 0.35;
+  margin-bottom: 16px;
+}
+
+.evidence-card__title {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.evidence-card__badge {
+  display: inline-block;
+  background: var(--bg-section);
+  color: var(--text-light);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Responsive for new components */
+@media (max-width: 768px) {
+  .methodology-flow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .methodology-flow::before {
+    display: none;
+  }
+
+  .methodology-step {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .methodology-step__bubble {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 2px;
+  }
+
+  .consultants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .service-pillar {
+    padding: 28px;
+  }
+
+  .allies-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .methodology-flow {
+    gap: 16px;
+  }
+}
